@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Share Modal | Aman Singh</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+</head>
+
+<body class="overflow-hidden bg-gradient-to-r from-slate-900 to-slate-700">
+    <div class="wrapper w-[100vw] h-[100vh] flex justify-center items-center flex-col relative ">
+        <div class="circle1 absolute"></div>
+        <div class="circle2 absolute"></div>
+        <div class="card text-center text-white p-10 h-[450px] ">
+            <div class="flex justify-center">
+                <img src="./images/picture.jpg" alt="" loading="lazy" width="150px" height="150px" class="rounded-full">
+            </div>
+            <div class="font-semibold text-[2rem] pt-8 pb-4">
+                <h2>Aman Singh</h2>
+            </div>
+            <div class="font-medium text-[20px] pb-4 text-[#ffffff85]">
+                <h3>Front-End Web developer</h3>
+            </div>
+            <div class="font-bold pb-5 text-lg">
+                <a href="https://drive.google.com/file/d/1UkkObvx5L6cK-W1m0UOeGeEe_PDHimcj/view?usp=share_link" target="_blank" class="text-xl bg-clip-text  bg-gradient-to-b from-sky-400 to-sky-200  text-transparent font-extrabold">My Resume</a>
+            </div>
+            <div class="flex gap-10">
+                <button onclick="openModal()" class="btn btn-share flex p-2 rounded-md relative">
+                    <i class="fa-solid fa-share absolute top-1/3"></i>
+                    <div class="pl-6">share my profile</div>
+                </button>
+                <button onclick="openModalconnect()" class="btn p-2 rounded-md relative flex">
+                    <i class="fa-solid fa-network-wired absolute top-1/3"></i>
+                    <div class="pl-7">Connect with me</div>
+                </button>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- modal component -->
+    <div class="modal w-[100vw] h-[100vh] flex justify-center items-center flex-col ">
+        <div
+            class="modal-card lg:w-[40vw] w-[70vw] bg-[#00000088] rounded-xl p-5 font-mono absolute top-1/3 text-white z-10 ">
+            <div class="flex justify-between pb-5 ">
+                <div class="font-semibold text-[30px]">
+                    <h1>
+                        Share My Profile
+                    </h1>
+                </div>
+                <div class="text-[30px] cursor-pointer"><i onclick="closeModal()"  
+                        class="fa-solid fa-xmark cursor-pointer"></i></div>
+            </div>
+            <hr class="mb-6">
+            <div>
+                <div class="text-[20px] pb-5">
+                    <h3>Share this via</h3>
+                </div>
+                <div class="flex justify-evenly flex-wrap">
+                    <a href="https://www.facebook.com" target="_blank" class="icon" id="facebook">
+                        <i
+                            class="fa-brands fa-facebook rounded-[50%] p-2.5 hover:bg-[#1771e6] hover:scale-125 transition-all duration-200"></i>
+                    </a>
+                    <a href="https://www.twitter.com" target="_blank" class="icon" id="twitter">
+                        <i
+                            class="fa-brands fa-twitter  rounded-[50%] p-2.5  hover:bg-[#1c99e6] hover:scale-125 transition-all duration-200"></i>
+                    </a>
+                    <a href="https://www.linkedin.com" target="_blank" class="icon" id="linkedin">
+                        <i
+                            class="fa-brands fa-linkedin  rounded-[50%] p-2.5 hover:bg-[#075ebb] hover:scale-125 transition-all duration-200"></i>
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank" class="icon" id="instagram">
+                        <i
+                            class="fa-brands fa-instagram rounded-[50%] p-2.5  hover:bg-[#cb2770] hover:scale-125 transition-all duration-200"></i>
+                    </a>
+                    <a href="https://web.telegram.org" target="_blank" class="icon" id="telegram">
+                        <i
+                            class="fa-brands fa-telegram  rounded-[50%] p-2.5 hover:bg-[#0081c2] hover:scale-125 transition-all duration-200"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- connect with me -->
+    <div class="modal-connect w-[100vw] h-[100vh] flex justify-center items-center flex-col ">
+        <div 
+            class="modal-card-connect lg:w-[40vw] w-[70vw] bg-[#00000088] rounded-xl p-5 font-mono absolute top-1/3 text-white z-10 ">
+            <div class="flex justify-between pb-5 ">
+                <div class="font-semibold text-[30px]">
+                    <h1>
+                        Connect With Me
+                    </h1>
+                </div>
+                <div  class="text-[30px] cursor-pointer"><i onclick="closeModalconnect()"
+                        class="fa-solid fa-xmark cursor-pointer"></i></div>
+            </div>
+            <hr class="mb-6">
+            <div>
+                <div class="text-[20px] pb-5">
+                    <h3>Connect via</h3>
+                </div>
+                <div class="flex justify-evenly flex-wrap">
+                    <a href="https://github.com/AmanSingh6574" target="_blank" class="icon" id="github">
+                        <i
+                            class="fa-brands fa-github rounded-[50%] p-2.5 hover:bg-[#2e46656c] hover:scale-125 transition-all duration-200"></i>
+                    </a>
+                    <a href="https://twitter.com/AMAN43589925" target="_blank" class="icon" id="twitter">
+                        <i
+                            class="fa-brands fa-twitter  rounded-[50%] p-2.5  hover:bg-[#1c99e6] hover:scale-125 transition-all duration-200"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/aman-singh-aa6073247/" target="_blank" class="icon"
+                        id="linkedin">
+                        <i
+                            class="fa-brands fa-linkedin  rounded-[50%] p-2.5 hover:bg-[#075ebb] hover:scale-125 transition-all duration-200"></i>
+                    </a>
+                    <a href="https://discord.com/channels/@me/1015276166061490288" target="_blank" class="icon"
+                        id="discord">
+                        <i
+                            class="fa-brands fa-discord rounded-[50%] p-2.5  hover:bg-[#7826ea] hover:scale-125 transition-all duration-200"></i>
+                    </a>
+                    <a href="mailto:amansingh6574@gmail.com" target="_blank" class="icon" id="telegram">
+                        <i
+                            class="fa-regular fa-envelope rounded-[50%] p-2.5 hover:bg-[#cd5322] hover:scale-125 transition-all duration-200"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay"  onclick="closeModalconnect() , closeModal()"></div>
+
+
+    <script src="https://kit.fontawesome.com/58a810656e.js" crossorigin="anonymous"></script>
+    <script type="module" src="./script.js"></script>
+</body>
+
+</html>
